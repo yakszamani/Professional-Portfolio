@@ -1,0 +1,360 @@
+
+body{
+    border: 0;
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    background-image: url(images/backgroundImage.png);
+    animation: grains 1s steps(2) infinite
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    color: white;
+    padding-top: 35px;
+    background-color:#3b121c ;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: x-large;
+    padding-left: 40px;
+
+}
+
+a:hover, a:focus {
+    padding: 0.4em 1em;
+    background: rgb(227, 203, 203);
+    color: black;
+}
+
+
+.navbox{
+    height: 40px;
+    width: 180px;
+    position: absolute;
+    right: 3%;
+   
+}
+
+p, h1, h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ;
+}
+.navbox img{
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    background-color:#3b121c;
+
+}
+
+
+/* index page */
+.gridContainer{
+    display: grid;
+    width: 99vw;
+    height: 130vh;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 10px;
+
+}
+
+header {
+    grid-row: 1/4;
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: xxx-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: cursive;
+    padding-top: 100px;
+
+}
+
+article {
+    grid-row: 4/-1;
+    grid-column: 1/4;
+    padding: 40px;
+   
+   
+}
+
+article h1{
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+article p{
+    font-size: medium;
+    padding-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ;
+}
+
+aside {
+    grid-row: 4/-1;
+    grid-column: 4/-1;
+    
+}
+
+.proffesionalBox{
+    height: 90%;
+    width: 70%;
+    margin: 30px;
+    margin-left: 15%;
+    border-radius: 20px;
+  
+
+}
+.proffesionalBox img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Creating Cards for Expertise page  */
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #3b121c;
+}
+
+.card{
+    border: 5px;
+    background-color: white;
+    margin: 5px;
+    margin-bottom: 2em;
+    margin-top: 20px;
+    flex: 0 1 calc(25% - 1em);
+}
+
+.card img {
+    width: 369px;
+    height: 380px;
+}
+
+.card p{
+    padding: 10px;
+    font-size: 12px;
+}
+
+.card h1{
+    padding-left: auto;
+    text-align: center; 
+    font-size: 21px;
+}
+
+.card h3{
+    padding-left: auto;
+    text-align: center; 
+    font-size: medium;
+}
+
+.card:hover, .card:focus{
+    box-shadow: 8px 15px 44px  rgb(180, 148, 8);
+  ;
+
+}
+
+/* flip cards for expertise page */
+.flipContainer{
+    display: flex;
+    background-color: #3b121c;
+    flex-wrap: wrap;
+ 
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    margin: 20px;
+    perspective: 1000px; 
+  }
+
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+   background-color:rgb(227, 203, 203);
+    color: black;
+    transform: rotateY(180deg);
+  }
+  
+
+/* media queries */
+@media only screen and (max-width: 768px) {
+    nav {
+      height: 60px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    
+    a {
+      font-size: 14px;
+      padding-left: 10px;
+    }
+  
+    .navbox {
+      height: 30px;
+      width: 120px;
+      right: 1%;
+    }
+  
+    footer {
+      height: 40px;
+      font-size: 12px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    header {
+      padding-top: 50px;
+      grid-row: 1/3;
+      grid-column: 1/-1;
+      font-size: xx-large;
+    }
+  
+    article {
+      grid-row: 3/5;
+      grid-column: 1/-1;
+      padding: 20px;
+    }
+    
+    aside{
+        grid-row: 7/11;
+        grid-column: 1/-1;
+    }
+  
+    article h1 {
+      font-size: 25px;
+    }
+  
+    article p {
+      font-size: small;
+      padding-top: 10px;
+    }
+  
+    .proffesionalBox {
+      height: 80%;
+      width: 80%;
+      margin: 15px;
+      margin-left: 10%;
+    }
+    .card{
+        flex: 0 1 calc(33% - 1em);
+    }
+
+    .card img {
+        width: 250px;
+        height: 250px;
+      }
+  
+  }
+  
+  @media only screen and (max-width: 480px) {
+    nav {
+      height: 50px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  
+    a {
+      font-size: 12px;
+      padding-left: 10px;
+    }
+
+    .flip-card {
+        width: 100%;
+        height: 250px;
+      }
+
+    .navbox {
+      height: 25px;
+      width: 80px;
+      right: 1%;
+    }
+  
+    footer {
+      height: 30px;
+      font-size: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  
+    header {
+      font-size: xx-large;
+      padding-top: 40px;
+    }
+  
+    article {
+        grid-row: 3/5;
+        grid-column: 1/-1;
+        padding: 10px;
+      }
+      
+      aside{
+          grid-row: 7/11;
+          grid-column: 1/-1;
+      }
+    article h1 {
+      font-size: 20px;
+    }
+  
+    article p {
+      font-size: x-small;
+      padding-top: 5px;
+    }
+  
+    .proffesionalBox {
+      height: 70%;
+      width: 90%;
+      margin: 10px;
+      margin-left: 5%;
+    }
+    .card{
+        flex: 0 1 calc(50% - 1em);
+    }
+  }
